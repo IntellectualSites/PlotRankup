@@ -1,4 +1,4 @@
-package com.empcraft.approval;
+package com.empcraft.plotrankup.;
 
 import java.util.List;
 import java.util.UUID;

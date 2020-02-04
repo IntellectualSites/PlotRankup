@@ -1,4 +1,4 @@
-package com.empcraft.approval;
+package com.empcraft.plotrankup.;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -35,6 +35,7 @@ import com.intellectualcrafters.plot.object.PlotPlayer;
 import com.intellectualcrafters.plot.util.MainUtil;
 import com.intellectualcrafters.plot.util.Permissions;
 import com.plotsquared.bukkit.util.BukkitUtil;
+import com.empcraft.plotrankup.Metrics;
 
 
 public class Main extends JavaPlugin implements Listener {
@@ -46,6 +47,7 @@ public class Main extends JavaPlugin implements Listener {
     public static HashMap<String, Long> cooldown = new HashMap<String, Long>();
     public static HashSet<String> toRemove = new HashSet<String>();
     public static FileConfiguration config;
+    private static final int BSTATS_ID = 6434;
 
     public static HashMap<String, Integer> worldChanged = new HashMap<String, Integer>();
 
@@ -59,6 +61,7 @@ public class Main extends JavaPlugin implements Listener {
         setupFlags();
         Main.config = this.getConfig();
         setupPlots();
+        new Metrics(this, BSTATS_ID);
     }
 
     private static void setupPlots() {

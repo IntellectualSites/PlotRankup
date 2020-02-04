@@ -1,4 +1,4 @@
-package com.empcraft.approval;
+package com.empcraft.plotrankup.;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
+import com.empcraft.plotrankup.PlotWrapper;
 import org.bukkit.Bukkit;
 
 import com.intellectualcrafters.plot.PS;
@@ -25,7 +26,7 @@ import com.plotsquared.general.commands.CommandDeclaration;
 @CommandDeclaration(
         command = "approve",
         permission = "plots.approve",
-        category = CommandCategory.ACTIONS,
+        category = CommandCategory.APPEARANCE,
         requiredType = RequiredType.NONE,
         description = "Used to approve player's plots",
         usage = "/plot approve"

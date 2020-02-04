@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+    maven { url "https://hub.spigotmc.org/nexus/content/repositories/snapshots" }
+    maven { url "http://maven.enginehub.org/repo/" }
+    maven { url "https://ci.athion.net/job/PlotSquared-Legacy/ws/mvn/" }
+}
+
+dependencies {
+    "implementation"("com.plotsquared:plotsquared-api:latest")
+    "implementation"("com.plotsquared:plotsquared-bukkitapi:latest"){ transitive = false}
+    "implementation"("org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT")
+    "implementation"("com.sk89q.worldedit:worldedit-bukkit:6.1.5-SNAPSHOT")
+    "implementation"("com.github.MilkBowl:VaultAPI:1.7")
+}
+
+processResources {
+    from('src/main/resources') {
+        include 'plugin.yml'
+    }
+}
+
+clean.doFirst {
+    delete "../target"
+}
+
+jar.destinationDirectory = file('./target')

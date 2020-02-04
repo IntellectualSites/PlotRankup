@@ -1,4 +1,4 @@
-package com.empcraft.approval;
+package com.empcraft.plotrankup.;
 
 import com.intellectualcrafters.plot.PS;
 import com.intellectualcrafters.plot.commands.CommandCategory;

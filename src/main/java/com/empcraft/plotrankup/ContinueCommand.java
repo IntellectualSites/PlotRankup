@@ -1,4 +1,4 @@
-package com.empcraft.approval;
+package com.empcraft.plotrankup.;
 
 import com.intellectualcrafters.plot.commands.CommandCategory;
 import com.intellectualcrafters.plot.commands.RequiredType;
